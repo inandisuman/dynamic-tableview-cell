@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dynamic_tableview_cell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ob5-bb-Zyn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2n2-SS-kLD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="op2-fJ-XKD"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-GJ-Ibg">
+                                <rect key="frame" x="10" y="781" width="394" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Top-d8-CQb">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="31"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Try Scroll View">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="OfK-5d-hgZ" kind="show" id="Zie-49-sB8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wyD-GJ-Ibg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0d1-eB-SpM"/>
+                            <constraint firstItem="Ob5-bb-Zyn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OF7-BV-uG7"/>
+                            <constraint firstItem="Ob5-bb-Zyn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UYA-lx-aOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wyD-GJ-Ibg" secondAttribute="bottom" constant="50" id="n6u-wq-rL2"/>
+                            <constraint firstItem="Ob5-bb-Zyn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qdR-Vx-icJ"/>
+                            <constraint firstItem="wyD-GJ-Ibg" firstAttribute="top" secondItem="Ob5-bb-Zyn" secondAttribute="bottom" constant="50" id="xSi-Uw-njC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wyD-GJ-Ibg" secondAttribute="trailing" constant="10" id="zC5-rC-sja"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ob5-bb-Zyn" id="ai1-5b-2f2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="ZOu-EL-WkZ">
+            <objects>
+                <viewController id="OfK-5d-hgZ" customClass="ScrollViewController" customModule="dynamic_tableview_cell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbQ-8Y-D2b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-9F-aLg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUD-fV-ov4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viewed from another planet, Earth would appear bright and bluish in colour. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJV-Fo-TeC">
+                                                <rect key="frame" x="10" y="20" width="394" height="41"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earth, Third planet in distance outward from the Sun" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiL-WW-KcK">
+                                                <rect key="frame" x="10" y="111" width="394" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xsy-Yq-WMd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="aiL-WW-KcK" secondAttribute="bottom" constant="20" id="2z4-JV-8L6"/>
+                                            <constraint firstItem="aiL-WW-KcK" firstAttribute="top" secondItem="jJV-Fo-TeC" secondAttribute="bottom" constant="50" id="9DA-Nd-GJH"/>
+                                            <constraint firstItem="jJV-Fo-TeC" firstAttribute="leading" secondItem="QUD-fV-ov4" secondAttribute="leading" constant="10" id="Dxl-ld-ADw"/>
+                                            <constraint firstItem="jJV-Fo-TeC" firstAttribute="top" secondItem="QUD-fV-ov4" secondAttribute="top" constant="20" id="MLd-Pj-xW6"/>
+                                            <constraint firstAttribute="trailing" secondItem="jJV-Fo-TeC" secondAttribute="trailing" constant="10" id="Oiu-dq-3Wg"/>
+                                            <constraint firstItem="aiL-WW-KcK" firstAttribute="leading" secondItem="QUD-fV-ov4" secondAttribute="leading" constant="10" id="P1L-hq-v6d"/>
+                                            <constraint firstAttribute="trailing" secondItem="aiL-WW-KcK" secondAttribute="trailing" constant="10" id="WEj-5T-r9P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="width" secondItem="znl-SU-yNc" secondAttribute="width" id="6hV-ng-4m5"/>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="bottom" secondItem="XuS-7E-3cN" secondAttribute="bottom" id="SEo-wx-AYp"/>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="leading" secondItem="XuS-7E-3cN" secondAttribute="leading" id="Tt3-rS-DDg"/>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="trailing" secondItem="XuS-7E-3cN" secondAttribute="trailing" id="ZJC-Dk-cW5"/>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="top" secondItem="XuS-7E-3cN" secondAttribute="top" id="sTb-6F-RZO"/>
+                                    <constraint firstItem="QUD-fV-ov4" firstAttribute="height" secondItem="znl-SU-yNc" secondAttribute="height" priority="250" id="wyf-wR-NRw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="XuS-7E-3cN"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="znl-SU-yNc"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7rD-eZ-A3A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dDe-9F-aLg" firstAttribute="top" secondItem="7rD-eZ-A3A" secondAttribute="top" id="3RH-Dz-JS7"/>
+                            <constraint firstItem="7rD-eZ-A3A" firstAttribute="trailing" secondItem="dDe-9F-aLg" secondAttribute="trailing" id="D47-vB-KTD"/>
+                            <constraint firstItem="dDe-9F-aLg" firstAttribute="leading" secondItem="7rD-eZ-A3A" secondAttribute="leading" id="EdI-dt-jMs"/>
+                            <constraint firstItem="7rD-eZ-A3A" firstAttribute="bottom" secondItem="dDe-9F-aLg" secondAttribute="bottom" id="nZb-cE-QQB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wN4-r8-hb6"/>
+                    <connections>
+                        <outlet property="label1" destination="jJV-Fo-TeC" id="uSu-JZ-3FQ"/>
+                        <outlet property="label2" destination="aiL-WW-KcK" id="Opl-ZT-GDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6Z-RQ-b25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.08695652173924" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

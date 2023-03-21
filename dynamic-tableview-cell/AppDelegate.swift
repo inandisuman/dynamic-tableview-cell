@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  various-asynchronous-methods
+//  dynamic-tableview-cell
 //
-//  Created by Deboleena on 20/03/23.
+//  Created by Suman Nandi on 20/03/23.
 //
 
 import UIKit
